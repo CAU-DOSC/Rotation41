@@ -1,18 +1,20 @@
 #include"header.h"
 
-void reverse(char *x, int begin, int end)
+void reverse(char *str, int begin, int end)
 {
-	char temp;
-
-	if (begin >= end)
-		return;
-
-	temp = *(x + begin);
-	*(x + begin) = *(x + end);
-	*(x + end) = temp;
-
-	reverse(x, ++begin, --end);
+   char temp;
+   int length = end - begin;
+   if (!length);
+   else
+      length++;
+   for (int i = 0; i < length / 2; i++)
+   {
+      temp = *(str + begin + i);
+      *(str + begin + i) = *(str + end - i);
+      *(str + end - i) = temp;
+   }
 }
+
 
 char *reversal(char *str, int n, int d)
 {
