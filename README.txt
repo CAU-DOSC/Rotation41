@@ -51,3 +51,13 @@ Your description start form next line and do not delete lines upto this point
 - - -
 
 >> Test Results
+
+[STRLength]  	ROTATE distance  	T.trivial	T.juggle	T.bw	 	T.reverse
+10		4			0.000000	0.000000	0.000000 	0.000000
+100		50			0.000000	0.000000	0.000000	0.000000
+1000		333			0.001000	0.000000	0.000000	0.000000
+5000		345			0.006000	0.000000	0.000000	0.000000
+10000		2384			0.072000	0.000000	0.000000	0.000000
+50000		5948			0.824000	0.005000	0.003000	0.004000
+
+- - -
