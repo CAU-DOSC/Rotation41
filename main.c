@@ -10,9 +10,9 @@ int main()
   double time;
   int n, d;
   
-  printf("n를 입력하세요\n");
+  printf("Enter the string length n\n");
   scanf("%d", &n);
-  printf("d을 입력하세요\n");
+  printf("Enter the rotate distance d\n");
   scanf("%d", &d);
   printf("\n");
   str = (char *)malloc(sizeof(char)* (n + 1));
@@ -20,7 +20,7 @@ int main()
   
   if (str == NULL)
   {
-    printf("잘못 입력하셨습니다. \n");
+    printf("Error\n");
     exit(1);
   }
   gendata(str,n);
@@ -33,7 +33,7 @@ int main()
   end = clock();
   time = (double)(end - start) / CLOCKS_PER_SEC;
   //printf("trivial 문자열 출력 => %s \n", a);
-  printf("trivial 걸리는 시간은 %f초 입니다. \n\n", time);
+  printf("trivial time : %f\n\n", time);
   
   strcpy(a,str);
   start = clock();
@@ -41,7 +41,7 @@ int main()
   end = clock();
   time = (double)(end - start) / CLOCKS_PER_SEC;
   //printf("juggling 문자열 출력 => %s \n", a);
-  printf("juggling 걸리는 시간은 %f초 입니다. \n\n", time);
+  printf("juggling time : %f\n\n", time);
   
   strcpy(a,str);
   start = clock();
@@ -49,7 +49,7 @@ int main()
   end = clock();
   time = (double)(end - start) / CLOCKS_PER_SEC;
   //printf("block_swap 문자열 출력 => %s \n",a);
-  printf("block_swap 걸리는 시간은 %f초 입니다. \n\n", time);
+  printf("block_swap time : %f\n\n", time);
   
   strcpy(a, str);
   start = clock();
@@ -57,7 +57,7 @@ int main()
   end = clock();
   time = (double)(end - start) / CLOCKS_PER_SEC;
   //printf("reverse 문자열 출력 => %s \n", a);
-  printf("reverse 걸리는 시간은 %f초 입니다. \n\n", time);
+  printf("reverse time : %f\n\n", time);
   
   return 0;
 }
