@@ -93,5 +93,8 @@ trivial > juggle > block-swap ≒ reverse 이라는 것을 알 수 있다.
   의 크기를 str Length/2 와 가깝게 설정하였을 때 처리 속도가 빠를 것을 추론할 수 있다.
   실행 결과, rotate distance가 str Length/2와 값이 비슷할 때 처리 속도가 다른 것에 비해서 가장 빠른 것을 알 수가 있다.
 
-- reverse
+- reverse는 총 세 번에 걸쳐 이루어진다. reverse(str, 0, d - 1);에서는 첫 번째부터 d번째까지, 
+  reverse(str, d, n - 1);에서는 그 뒤부터 마지막까지, reverse(str, 0, n-1);에서는 처음부터 끝까지 reverse 한다. 
+  따라서 각각 d/2번, n-d/2번, n/2번의 연산이 이루어지므로 총 d/2 + n-d/2 + n/2 = n번의 연산이 이루어진다. 
+  이를 통해 reverse에 걸리는 시간은 d값과 관련이 없다는 것을 알 수 있다. 
 - - -
