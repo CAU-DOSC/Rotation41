@@ -32,7 +32,7 @@ d < 0 일 때 counterclockwise rotation
                    reverse 함수에서는 문자열, reverse할 구간의 처음과 끝을 입력받아 reverse 한다. 
                    reversal 함수에서는 d>0일 때와 d<0일때로 나누어서 
 		   d>0일 때는 reverse(str, 0, d -1);, reverse(str, d, n - 1);, reverse(str, 0, n - 1); 로 호출하고
-		   d>0일 때는 d를 -d 로 바꿔서 양수로 만들어 준 후, 
+		   d<0일 때는 d를 -d 로 바꿔서 양수로 만들어 준 후, 
 		   reverse(str, n-d, n-1);, reverse(str, 0, n-d-1);, reverse(str, 0, n-1); 로 세번 호출한다.
 2. triv.c
 	input : str, d, n
