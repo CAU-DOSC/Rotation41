@@ -41,6 +41,10 @@ d < 0 일 때 counterclockwise rotation
 	input : str, d, n
 	output : str
 	
+	함수 설명 : 문자열 포인터와 n, d를 인수로 넘겨 받는다. d가 음수일 경우와 양수일 경우로 분류한다. d가 음수일 경우 문자열의 첫 번째 value를
+		 temp에 임시 저장하고, d칸 간격으로 문자열을 이동시킨 뒤 마지막으로 마지막 value에 temp를 저장한다. 이를 d와 n의 최대공약수 만큼 
+		 반복한다. d가 양수일 경우 value를 temp에 임시 저장하고, d칸 간격으로 문자열을 이동시킨 뒤 마지막으로 첫번째 value에 temp를 저장
+		 한다. 이 과정 또한 d와 n의 최대공약수 만큼 반복한다.
 	
 4. block_swap.c
 	input : str, n, d
