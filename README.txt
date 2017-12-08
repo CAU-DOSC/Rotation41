@@ -106,6 +106,8 @@ d < 0 일 때 counterclockwise rotation
 trivial > juggle > block-swap ≒ reverse 이라는 것을 알 수 있다.
 
 - trivial
+  trivial은 문자열 str전체를 옮기는 과정을 d번 수행하므로 다른 juggle, block-swap, reverse에 비해서 시간이 오래 걸린다. 또한 아마도 내가 구현한 
+  코드에서 for문 2개를 사용했기 때문에 시간이 더 오래 걸리는 것이라고 예상해볼 수 있다.  
 
 - juggle
   juggling은 적어도 trivial 알고리즘의 계산량에서 Rotate 횟수인 d로 나눈 만큼(즉, N만큼)의 계산을 수행해야 한다. 하지만 N과 d의 GCD(최대공약수)
