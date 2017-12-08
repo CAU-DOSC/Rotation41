@@ -3,15 +3,15 @@
 char *triv(char* str, int d, int n)
 {
 	char save_str = { 0 };
-	int num = 0;
+	int cnt = 0;
 	if (d < 0)
 	{
 		d = 0 - d;
-		for (int num = 0; num < d; num++)
+		for (int cnt = 0; cnt < d; cnt++)
 		{
 			save_str = str[0];
 
-			for (int j = 0; j < n; j++)
+			for (int j = 0; j < n-1; j++)
 			{
 				str[j] = str[j + 1];
 			}
@@ -22,7 +22,7 @@ char *triv(char* str, int d, int n)
 
 	else
 	{
-		for (int num = 0; num < d; num++)
+		for (int cnt = 0; cnt < d; cnt++)
 		{
 			save_str = str[n - 1];
 
