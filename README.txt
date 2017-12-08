@@ -84,7 +84,7 @@ trivial > juggle > block-swap ≒ reverse 이라는 것을 알 수 있다.
 - block-swap은 문자열을 str Length의 크기와 rotate distance의 크기로 묶고 swap을 하고 다시 재귀하면서
   str Length와 rotate distance가 같아질 때까지 block-swap을 실행하는 것이어서 같은 str Length에서 rotate distance
   의 크기를 str Length/2 와 가깝게 설정하였을 때 처리 속도가 빠를 것을 추론할 수 있다.
-  따라서 실행 결과, rotate distance가 str Length/2와 값이 비슷할 때 처리 속도가 다른 것에 비해서 가장 빠른 것을 알 수가 있다.
+  실행 결과, rotate distance가 str Length/2와 값이 비슷할 때 처리 속도가 다른 것에 비해서 가장 빠른 것을 알 수가 있다.
 
 - reverse
 - - -
