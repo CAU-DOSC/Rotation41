@@ -27,12 +27,13 @@ d < 0 일 때 counterclockwise rotation
 1. reverse.c
 	input : str, n, d
 	output : str
-	
-	함수 설명 : (d > 0 일때) 전체 길이 n에서 앞에서 부터 d만큼의 문자열을 뒤에서 부터 d만큼의 문자열과 교체하고
-				다시 block_swap function에 넣는다.(재귀함수)				
-		   (d < 0 일때) 전체 길이 n에서 뒤에서 부터 d만큼의 문자열을 앞에서 부터 d만큼의 문자열과 교체하고
-		   		다시 block_swap function에 넣는다.(재귀함수)
-				이런식으로 반복을 하면서 d와 n-d가 같을 때까지 반복하면 block_swap이 된다.
+		
+        함수 설명 : 문자열을 reverse 시키는 reverse 함수가 있고, 이 함수를 세 번 호출하는 함수 reversal이 있다. 
+                   reverse 함수에서는 문자열, reverse할 구간의 처음과 끝을 입력받아 reverse 한다. 
+                   reversal 함수에서는 d>0일 때와 d<0일때로 나누어서 
+		   d>0일 때는 reverse(str, 0, d -1);, reverse(str, d, n - 1);, reverse(str, 0, n - 1); 로 호출하고
+		   d>0일 때는 d를 -d 로 바꿔서 양수로 만들어 준 후, 
+		   reverse(str, n-d, n-1);, reverse(str, 0, n-d-1);, reverse(str, 0, n-1); 로 세번 호출한다.
 2. triv.c
 	input : str, d, n
 	output : str
@@ -42,6 +43,12 @@ d < 0 일 때 counterclockwise rotation
 4. block_swap.c
 	input : str, n, d
 	output : str
+	
+	함수 설명 : (d > 0 일때) 전체 길이 n에서 앞에서 부터 d만큼의 문자열을 뒤에서 부터 d만큼의 문자열과 교체하고
+				다시 block_swap function에 넣는다.(재귀함수)				
+		   (d < 0 일때) 전체 길이 n에서 뒤에서 부터 d만큼의 문자열을 앞에서 부터 d만큼의 문자열과 교체하고
+		   		다시 block_swap function에 넣는다.(재귀함수)
+				이런식으로 반복을 하면서 d와 n-d가 같을 때까지 반복하면 block_swap이 된다.
 
 - - -
 
